@@ -32,7 +32,7 @@ jobs:
       - name: Install poetry ${{env.poetry_version}}
         shell: bash
         run: |
-          curl -sSL https://install.python-poetry.org | POETRY_HOME=${{env.poetry_home}} python3 - --version ${{env.poetry_version}}
+          python -m pip install --user poetry
           export PATH="${{env.poetry_home}}/bin:$PATH"
           poetry --version
 
@@ -61,7 +61,7 @@ jobs:
       - name: Install poetry ${{env.poetry_version}}
         shell: bash
         run: |
-          curl -sSL https://install.python-poetry.org | POETRY_HOME=${{env.poetry_home}} python3 - --version ${{env.poetry_version}}
+          python -m pip install --user poetry
           export PATH="${{env.poetry_home}}/bin:$PATH"
           poetry --version
 
@@ -69,7 +69,7 @@ jobs:
         shell: bash
         run: |
           export PATH="${{env.poetry_home}}/bin:$PATH"
-          poetry install --only ci
+          poetry install
 
       - name: Run ruff
         shell: bash
