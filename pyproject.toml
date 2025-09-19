@@ -8,8 +8,6 @@ authors = [
 readme = "README.md"
 package-mode = false
 requires-python = ">=3.11"
-
-[tool.poetry.packages]
 packages = [{include = "fastapi_microservices_example"}]
 
 dependencies = [
