@@ -40,7 +40,7 @@ jobs:
         shell: bash
         run: |
           export PATH="${{env.poetry_home}}/bin:$PATH"
-          poetry install --with tests
+          poetry install
 
       - name: Run unit tests
         shell: bash
