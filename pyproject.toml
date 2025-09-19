@@ -5,9 +5,8 @@ description = ""
 authors = ["abhishekk40"]
 readme = "README.md"
 packages = [
-    {include = "cast-service"}
+    {include = "cast-service"},
     {include = "movie-service"}]
-# Remove 'package-mode' and 'requires-python' from here
 
 [tool.poetry.dependencies]
 python = ">=3.11"
