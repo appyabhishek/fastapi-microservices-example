@@ -1,19 +1,15 @@
-[project]
+[tool.poetry]
 name = "fastapi-microservices-example"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "abhishekk40"}
-]
+authors = ["abhishekk40"]
 readme = "README.md"
-package-mode = false
-requires-python = ">=3.11"
 packages = [{include = "fastapi_microservices_example"}]
+# Remove 'package-mode' and 'requires-python' from here
 
-dependencies = [
-    "pre-commit (>=4.3.0,<5.0.0)"
-]
-
+[tool.poetry.dependencies]
+python = ">=3.11"
+pre-commit = ">=4.3.0,<5.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
